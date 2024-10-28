@@ -12,8 +12,6 @@ L'output del prezzo finale va stampato in forma umana (con massimo due decimali,
 chiedo all'utente il numero di chilometri che vuole percorrerre 
 chiedo all'utente la sua età 
 prezzo intero del biglietto: 0,21€ al km
-sconto del 20% per i minorenni
-sconto del 40% per gli over 65
 
 
 //ESECUZIONE LOGICA
@@ -21,12 +19,15 @@ calcolo il prezzo intero del biglietto in base ai chilometri che vuole percorrer
     - prezzo intero del biglietto: (num. km x 0,21)
 
 calcolo in base alla sua età se è applicabile uno sconto:
-    - prezzoFinaleDelBiglietto;
+    - sconto;
     - se (età <18) {
-        prezzo finale del biglietto = (prezzo intero del biglietto / 100 * 20)
+        sconto = (prezzo intero del biglietto / 100 * 20)
     } altrimenti se (età > 65) {
-        prezzo finale del biglietto = (prezzo intero del biglietto /100 * 40)
+        sconto = (prezzo intero del biglietto /100 * 40)
     }
+
+calcolo il prezzo finale del biglietto:
+    - prezzoFinale = (prezzoIntero - sconto)
 
 
 // OUTPUT
