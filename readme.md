@@ -24,7 +24,8 @@ calcolo in base alla sua età se è applicabile uno sconto:
         sconto = (prezzo intero del biglietto / 100 * 20)
     } altrimenti se (età > 65) {
         sconto = (prezzo intero del biglietto /100 * 40)
-    }
+    } altrimenti
+        sconto = 0
 
 calcolo il prezzo finale del biglietto:
     - prezzoFinale = (prezzoIntero - sconto)

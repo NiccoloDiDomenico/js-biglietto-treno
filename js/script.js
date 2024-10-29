@@ -1,23 +1,25 @@
 // INPUT
+// inserisco i dati
+let prezzoIntero = 0.21;
+console.log(prezzoIntero);
+
 // inserisco i dati utente
 const km = prompt ("Quanti km vuoi percorrere?");
 const età = prompt ("Quanti anni hai?");
 console.log(km, età);
 
-numKm = parseInt(km);
-numEtà = parseInt(età);
-console.log(numKm, numEtà);
 
 // mi accerto che l'utente inserisce dei numeri
-if (isNaN(km, età)) {
+if (isNaN(km) || isNaN(età)) {
     alert ("Errore, inserire un valore numerico!");
 } else {
-    // inserisco i dati
-    let prezzoIntero = 0.21;
-    console.log(prezzoIntero);
-    
-    
     // ESECUZIONE LOGICA
+
+    // transformo in numeri i dati dell'utente
+    numKm = parseInt(km);
+    numEtà = parseInt(età);
+    console.log(numKm, numEtà);
+
     // calcolo il prezzo intero in base ai km dell'utente
     prezzoIntero = (numKm * prezzoIntero);
     console.log(prezzoIntero);
@@ -38,6 +40,10 @@ if (isNaN(km, età)) {
     
     // OUTPUT
     // stampo il prezzo finale con i numeri decimali
-    console.log(prezzoFinale.toFixed(2));
+    
+
+    const message = `Il prezzo del biglietto intero è ${prezzoIntero.toFixed(2)}€, sarà applicato uno sconto di ${sconto}€ ed il prezzo finale sarà di ${prezzoFinale.toFixed(2)}€`
+    console.log(message);
 }
+
 
